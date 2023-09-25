@@ -1,8 +1,10 @@
+require('dotenv').config();
+
 module.exports = {
-  HOST: 'localhost',
-  USER: 'postgres',
-  PASSWORD: 'love123',
-  DB: 'node_sequelize_api_db',
+  HOST:process.env.db_HOST,
+  USER:process.env.db_USER,
+  PASSWORD:process.env.db_PASSWORD,
+  DB:process.env.DB,
   dialect: 'postgres',
 
   pool: {
